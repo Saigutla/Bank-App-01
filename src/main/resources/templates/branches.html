@@ -1,0 +1,27 @@
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> <!-- Use HTTP here, not HTTPS -->
+<head>
+    <title>Bank Branches</title>
+    <link rel="stylesheet" href="/styles.css">
+    
+</head>
+<body>
+
+<h1 th:text="${bankName}">Bank Name</h1>
+
+<table border="1">
+    <tr>
+        <th>Branch Name</th>
+        <th>Location</th>
+    </tr>
+    <tr th:each="branch:${branches}">
+        <td th:text="${branch.name}"></td>
+        <td th:text="${branch.location}"></td>
+    </tr>
+    
+</table>
+
+</body>
+</html>

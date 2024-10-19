@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bank Services</title>
+    <link rel="stylesheet" href="/styles.css">
+    
+</head>
+<body>
+<h1 th:text="${bankName}">Bank Name</h1>
+<table border="1">
+    <tr>
+        <th>Service Name</th>
+    </tr>
+    <tr th:each="service:${services}">
+        <td th:text="${service.name}"></td>
+    </tr>
+</table>
+</body>
+</html>
